@@ -8,7 +8,7 @@ import Footer from '../Components/Footer/Footer';
 
 function Home() {
   return (
-    <div className="homeParentDiv">
+    <div className="">
      <Header/>
      <Banner/>
      <Cards/>
