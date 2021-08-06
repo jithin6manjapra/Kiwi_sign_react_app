@@ -1,6 +1,5 @@
 .banner{
-    background-image: url("https://media.audleytravel.com/-/media/images/home/australasia/new-zealand/letterbox-images/new-istock/istock_000037251302_new_zealand_milford_sound.jpg?q=79&w=1920&h=640");
-    background-size: cover;
+       background-size: cover;
     height: 550px;
     color: white;
    
@@ -50,7 +49,7 @@
 
 
 .fade_bottom{
-    height: 8.0rem;
+    height: 8.4rem;
     background-image: linear-gradient(180deg,transparent,rgba(37,37,37,.61),#111);
 
 }

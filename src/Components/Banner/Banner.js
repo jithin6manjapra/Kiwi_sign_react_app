@@ -1,18 +1,50 @@
   
 import React from 'react'
 import './Banner.css'
+import {FirebaseData} from '../../Firebase/Config'
+import {useEffect,useState} from 'react'
+
+
+
+
 function Banner() {
+   
+    const [place, setPlace] = useState("")
+    const [desc, setDesc] = useState("")
+    const [img, setImg] = useState("")
+  
+    useEffect(() => {
+     
+        
+        FirebaseData.firestore().collection('Admin').get().then(snapshot=>{
+
+            snapshot.forEach((obj)=>{
+              // console.log(obj.data().image)
+              setPlace(obj.data().Name)
+              setDesc(obj.data().Description)
+              setImg(obj.data().Image)
+             console.log(obj.data().Image)
+
+                })
+           }
+                )
+
+
+    }, []) 
+
     return (
-        <div 
-         className='banner'>
-             <hr color="red"></hr>
+
+       
+
+        <div  className='banner' style={{backgroundImage:`url("${img? img: ""}")`}}>
+          
             <div className='content' >
-                <h1 className='title'>Queens town </h1>
+            <h1 className='title'>{place}</h1>
                 <div className='banner_buttons' >
                     <button className='button' >Map</button>
                     <button className='button' >Read more...</button>
                 </div>
-                <h1 className='description'> In publishing and graphic design, Lorem ipsum is a placeholder text commonly used In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content</h1>
+                <h1 className='description'> {desc}</h1>
             </div>
         <div className="fade_bottom"></div>
         </div>

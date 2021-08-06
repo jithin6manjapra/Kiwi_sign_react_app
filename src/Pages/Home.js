@@ -6,12 +6,14 @@ import Banner from '../Components/Banner/Banner';
 import Cards from '../Components/Cards/Cards'
 import Footer from '../Components/Footer/Footer';
 
+
 function Home() {
   return (
     <div className="">
      <Header/>
      <Banner/>
-     <Cards/>
+     <Cards title="North Island" />
+     <Cards title="South Island"/>
      <Footer/>
     </div>
   );
