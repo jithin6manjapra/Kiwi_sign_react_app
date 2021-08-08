@@ -23,7 +23,7 @@ function Banner() {
               setPlace(obj.data().Name)
               setDesc(obj.data().Description)
               setImg(obj.data().Image)
-             console.log(obj.data().Image)
+             console.log(obj.data())
 
                 })
            }
