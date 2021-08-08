@@ -1,6 +1,5 @@
 import React,{useState,useContext} from 'react';
 import { useHistory } from 'react-router-dom';
-//import { FirebaseContext } from '../../Store/FirebaseContext';
 import {FirebaseContext} from '../../Store/FirebaseContext'
 
 import './Login.css';
@@ -19,18 +18,18 @@ function Login() {
     e.preventDefault()
     
 
-    let f=0;
+   /* let f=0;
     if(email==="admin@kiwisign.nz" && password==="qwerty")
     { f=0;}
     else { f=0; }
-   
+   */
 
    
 
     FirebaseData.auth().signInWithEmailAndPassword(email,password).then(()=>{
        
-     {f? history.push("/Admin"):history.push("/User_home")}
-   
+    // {f? history.push("/Admin"):history.push("/User_home")}
+    history.push("/User_home")
     } ).catch((error)=>{
       alert(error.message)
     })

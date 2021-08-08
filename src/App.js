@@ -6,7 +6,7 @@ import Admin from './Components/Admin/Admin';
 import Login from './Components/Login/Login';
 import UserHome from './Components/UserHome/UserHome'
 
-import { AuthContext ,FirebaseContext} from './store/FirebaseContext';
+import { AuthContext ,FirebaseContext} from './Store/FirebaseContext';
 import React,{useContext, useEffect} from 'react';
 
 

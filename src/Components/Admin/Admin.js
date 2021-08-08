@@ -1,12 +1,14 @@
-import React, { Fragment,useState,useContext } from 'react';
+
+import React, { Fragment } from 'react';
+//import {useState,useContext } from 'react';
 import './Admin.css';
 import Header from '../Header/Header';
-import { useHistory } from 'react-router-dom';
-import { FirebaseContext,AuthContext} from '../../store/FirebaseContext'
+//import { useHistory } from 'react-router-dom';
+//import { FirebaseContext,AuthContext} from '../../store/FirebaseContext'
 
 const Admin = () => {
 
-
+/*
 const [title, setTitle] = useState("")
 const [description, setDescription] = useState("")
 const [content, setContent] = useState("")
@@ -42,6 +44,7 @@ const handleSubmit=()=>{
 })
 
 }
+*/
 
   return (
     <Fragment>
@@ -55,8 +58,8 @@ const handleSubmit=()=>{
               className="input"
               type="text"
               id="fname"
-              value={title}
-              onChange={((e)=>{setTitle(e.target.value)})}
+             // value={title}
+             // onChange={((e)=>{setTitle(e.target.value)})}
               name="Name"
               defaultValue="John"
             />
@@ -67,8 +70,8 @@ const handleSubmit=()=>{
               className="input"
               type="text"
               id="fname"
-              value={description}
-              onChange={((e)=>{setDescription(e.target.value)})}
+              //value={description}
+              //onChange={((e)=>{setDescription(e.target.value)})}
               name="category"
               defaultValue="John"
             />
@@ -79,8 +82,8 @@ const handleSubmit=()=>{
               className="input"
               type="text"
               id="fname"
-              value={content}
-              onChange={((e)=>{setContent(e.target.value)})}
+              //value={content}
+              //onChange={((e)=>{setContent(e.target.value)})}
               name="category"
               defaultValue="John"
             />
@@ -89,12 +92,13 @@ const handleSubmit=()=>{
         
           <br />
           <input 
-             onChange={(e)=>{
-               setImage(e.target.files[0])
-              }}
+            // onChange={(e)=>{
+             //  setImage(e.target.files[0])
+            //  }}
             type="file" />
             <br />
-            <button onClick={handleSubmit} className="uploadBtn">upload and Submit</button>
+            <button //onClick={handleSubmit} 
+            className="uploadBtn">upload and Submit</button>
           
         </div>
       </card>

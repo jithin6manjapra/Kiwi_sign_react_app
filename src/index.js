@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import App from './App';
 import {FirebaseData} from "./Firebase/Config"
-import Context from './store/FirebaseContext'
+import Context from './Store/FirebaseContext'
 import {FirebaseContext} from "./Store/FirebaseContext"
 
 ReactDOM.render(
