@@ -12,20 +12,30 @@ function Login() {
   const [email, setEmail] = useState('')
   const [password,setPassword] = useState('')
 
-
+  
   const {FirebaseData}=useContext(FirebaseContext)
   const history = useHistory()
   const handleLogin =(e)=>{
-  
-  
     e.preventDefault()
+    
+
+    let f=0;
+    if(email==="admin@kiwisign.nz" && password==="qwerty")
+    { f=0;}
+    else { f=0; }
+   
+
+   
+
     FirebaseData.auth().signInWithEmailAndPassword(email,password).then(()=>{
        
-      history.push("/User_home")
+     {f? history.push("/Admin"):history.push("/User_home")}
    
     } ).catch((error)=>{
       alert(error.message)
     })
+
+
 
   }
 

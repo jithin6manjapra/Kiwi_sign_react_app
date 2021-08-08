@@ -6,7 +6,27 @@ import Admin from './Components/Admin/Admin';
 import Login from './Components/Login/Login';
 import UserHome from './Components/UserHome/UserHome'
 
+import { AuthContext ,FirebaseContext} from './store/FirebaseContext';
+import React,{useContext, useEffect} from 'react';
+
+
 function App() {
+
+  const { setUser}=useContext(AuthContext)
+  
+  const {FirebaseData}=useContext(FirebaseContext)
+ 
+
+  useEffect(()=>{
+    FirebaseData.auth().onAuthStateChanged((user)=>
+  {
+    setUser(user)
+   })
+
+
+  })
+
+
   return (
     <div className="App">
   
