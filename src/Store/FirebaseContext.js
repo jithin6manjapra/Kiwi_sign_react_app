@@ -7,7 +7,7 @@ export const AuthContext =createContext(null)
 
 export default function Context({children}){
 
-    const [user, setUser] = useState("")
+    const [user, setUser] = useState("cdjkn")
     return(
      <AuthContext.Provider value={{user,setUser}}>
 

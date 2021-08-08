@@ -1,6 +1,6 @@
 import React,{useState,useContext} from 'react';
 import { useHistory } from 'react-router-dom';
-import {FirebaseContext} from '../../Store/FirebaseContext'
+import {FirebaseContext} from '../../store/FirebaseContext'
 
 import './Login.css';
 
@@ -29,7 +29,7 @@ function Login() {
     FirebaseData.auth().signInWithEmailAndPassword(email,password).then(()=>{
        
     // {f? history.push("/Admin"):history.push("/User_home")}
-    history.push("/User_home")
+    history.push("/")
     } ).catch((error)=>{
       alert(error.message)
     })

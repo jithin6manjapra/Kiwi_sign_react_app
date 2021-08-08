@@ -6,25 +6,26 @@ import Admin from './Components/Admin/Admin';
 import Login from './Components/Login/Login';
 import UserHome from './Components/UserHome/UserHome'
 
-import { AuthContext ,FirebaseContext} from './Store/FirebaseContext';
-import React,{useContext, useEffect} from 'react';
+import { AuthContext} from './store/FirebaseContext';
+import React,{useContext,useEffect} from 'react';
+import {FirebaseContext} from './store/FirebaseContext'
 
 
 function App() {
 
-  const { setUser}=useContext(AuthContext)
+  const {user,setUser}=useContext(AuthContext)
+  
   
   const {FirebaseData}=useContext(FirebaseContext)
  
-
+   
   useEffect(()=>{
     FirebaseData.auth().onAuthStateChanged((user)=>
-  {
-    setUser(user)
+    {
+      setUser(user)
+    })
+ 
    })
-
-
-  })
 
 
   return (
